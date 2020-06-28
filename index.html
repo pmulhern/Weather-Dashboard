@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Weather Dashboard</title>
+  </head>
+
+  <body>
+    <header>
+      <h1 class="display-1" id="title">Weather Dashboard</h1>
+    </header>
+
+    <!-- Timeblocks go here -->
+    <!-- <div class = "searchArea">
+      <h2>Search for City</h2>
+      <input size="40" type="text" class="input class" data-hour="" id="search">   
+      <button class="submit" id="subBtn">Submit</button>  
+    </div>   -->
+
+    <div class="navbar navbar-light bg-light">
+      <form class="form-inline">
+        <h2 class>Search for City</h2>
+        <input class="form-control mr-sm-2 ml-2" id = "citySearch" size="40" type="search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0 ml-2" id = "searchBtn" type="submit">Search</button>
+      </form>
+    </div>
+
+
+    <Main class="mb-12" id ="about" style="max-width: 1300px; max-height: 600px;">
+      <Section class="row">
+          <div class="col-sm-8 ml-5 ">
+            <h1 class="current"><span id = "city"></span><img id="weatherImage" src=""></h3>                 
+            <h4 class="current">Temperature: <span id="temp"></span></h4>
+            <h4 class="current">Humidity: <span id="humidity"></span></h4>
+            <h4 class="current">Wind Speed: <span id="windspeed"></span></h4>
+          </div> 
+
+      </Section>
+
+      <br> 
+      <br> 
+      
+      <Section class="row ml-3 container-fluid fiveDay">
+          
+          <div class="p-1 ml-2 bg-primary text-white">
+            <div class="col-sm-2 weatherCards text-left" id="Day1">
+                <h5 class="title">Date: <span id="Date"></span> </h5>
+                <img class="text">
+                <p class="text">Temperature:<span id="Temp"></span> </p>
+                <p class="text">Humidity <span id="Humidity"></span> </p>
+            </div>
+          </div>
+        
+          <div class="p-1 ml-2 bg-primary text-white">
+            <div class="col-sm-2 weatherCards text-left" id="Day2">
+                <h5 class="title">Date: <span id="Date"></span> </h5>
+                <img class="text">
+                <p class="text">Temperature:<span id="Temp"></span> </p>
+                <p class="text">Humidity <span id="Humidity"></span> </p>
+            </div>
+          </div>
+
+          <div class="p-1 ml-2 bg-primary text-white">
+            <div class="col-sm-2 weatherCards text-left" id="Day3">
+                <h5 class="title">Date: <span id="Date"></span> </h5>
+                <img class="text">
+                <p class="text">Temperature:<span id="Temp"></span> </p>
+                <p class="text">Humidity <span id="Humidity"></span> </p>
+            </div>
+          </div>
+
+          <div class="p-1 ml-2 bg-primary text-white">
+            <div class="col-sm-2 weatherCards text-left" id="Day4">
+                <h5 class="title">Date: <span id="Date"></span> </h5>
+                <img class="text">
+                <p class="text">Temperature:<span id="Temp"></span> </p>
+                <p class="text">Humidity <span id="Humidity"></span> </p>
+            </div>
+          </div>
+
+          <div class="p-1 ml-2 bg-primary text-white">
+            <div class="col-sm-2 weatherCards text-left" id="Day5">
+                <h5 class="title">Date: <span id="Date"></span> </h5>
+                <img class="text">
+                <p class="text">Temperature:<span id="Temp"></span> </p>
+                <p class="text">Humidity <span id="Humidity"></span> </p>
+            </div>
+          </div>
+
+      </Section>
+
+      <br>
+
+      
+      
+    </Main>
+
+    <!-- <aside class="benefits">
+      <Section class="benefit">
+          <h3>Lead Generation</h3>
+          <img src="./assets/images/lead-generation.png" alt="Lead Generation"/>
+          <p>Inbound strategies for lead generation require less work for your business, bringing customers directly to your website.</p>
+      </Section>
+
+      <Section class="benefit">
+          <h3>Brand Awareness</h3>
+          <img src="./assets/images/brand-awareness.png" alt="Brand Awareness"/>
+          <p>Users find your business through paid and organic searches, increasing the search ranking and visibility for your business.</p>
+      </Section>
+
+      <Section class="benefit">
+          <h3>Cost Management</h3>
+          <img src="./assets/images/cost-management.png" alt="Cost Management"/>
+          <p>As the search ranking for your business increases, your advertising costs decrease, and you no longer need to advertise your page.</p>
+      </Section>
+  </aside> -->
+
+
+
+
+    <!-- <div>
+      <ul class="list-group">
+        <li class="list-group-item">Cras justo odio</li>
+        <li class="list-group-item">Dapibus ac facilisis in</li>
+        <li class="list-group-item">Morbi leo risus</li>
+        <li class="list-group-item">Porta ac consectetur ac</li>
+        <li class="list-group-item">Vestibulum at eros</li>
+      </ul>
+
+    </div> -->
+
+    <!-- <div class="container-fluid">
+      <div class="row justify-content-around">
+          <div class="col-3 card bg-light mt-2">
+              <div class="form-inline mt-3">
+                <input size="40" type="text" class="input class" data-hour="" id="search">   
+                <button class="submit" id="subBtn">Submit</button>  
+              </div>
+
+              <ul class="mr-5 mt-2" id="search-history">
+      
+              </ul>
+
+          </div>
+          
+          <div class="col-5">
+              <div class="row" id="current-weather" >
+                  <div class="col-7" >
+                      
+                      <h3><span id = "current-city"></span><img id="weather-img" src=""></h3> 
+                      
+                  
+                      <p>Temperature: <span id="temperature"></span></p>
+                      <p>Humidity: <span id="humidity"></span></p>
+                      <p>Wind Speed: <span id="windspeed"></span></p>
+                      
+                  </div>
+
+              </div>
+              
+              
+                  
+              <h3 class="mt-5 mb-5">5 Day Forecast: </h3>
+                  
+                     <div class="card-deck">
+                      <div class="card bg-primary">
+                          <div id="day-1" class="card-body p-2">
+                                  <h6 class="card-date"></h6>
+                                  <img class = "weather-icon">
+                                  <p class = "weather-temp"></p>
+                                  <p class = "weather-humidity"></p>
+
+                          </div>
+                      </div>
+                      <div class="card bg-primary">
+                          <div id="day-2" class="card-body p-2">
+                                  <h6 class="card-date"></h6>
+                                  <img class = "weather-icon">
+                                  <p class = "weather-temp"></p>
+                                  <p class = "weather-humidity"></p>
+
+                          </div>
+                      </div>
+                      <div class="card bg-primary">
+                          <div id="day-3" class="card-body p-2">
+                                  <h6 class="card-date"></h6>
+                                  <img class = "weather-icon">
+                                  <p class = "weather-temp"></p>
+                                  <p class = "weather-humidity"></p>
+
+                          </div>
+
+                      </div>
+                      <div class="card bg-primary">
+                          <div id="day-4" class=" card-body p-2">
+                                  <h6 class="card-date"></h6>
+                                  <img class = "weather-icon">
+                                  <p class = "weather-temp"></p>
+                                  <p class = "weather-humidity"></p>
+
+                          </div>
+                      </div>
+                      <div class="card bg-primary">
+                          <div id="day-5" class="card-body p-2">
+                                  <h6 class="card-date"></h6>
+                                  <img class = "weather-icon">
+                                  <p class = "weather-temp"></p>
+                                  <p class = "weather-humidity"></p>
+                          </div>
+                      </div>
+                      </div>
+                  
+              </div>
+              
+              
+          </div> -->
+          
+      </div>
+    
+    <!-- </div> -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="main.js"></script> 
+
+    
+
+    </script>
+  </body>
+</html>

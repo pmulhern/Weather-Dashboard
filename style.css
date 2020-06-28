@@ -1,0 +1,47 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1;
+  }
+
+  #title {
+      background-color: slategray;
+      text-align: center;
+      color: white;
+  }
+
+  .searchArea {
+      margin-left: 20px;
+  }
+
+  #search {
+    padding-top: 10px;
+  }
+
+  .current{
+      padding-top: 10px;
+      margin-top: 10px;
+  }
+
+  /* .weatherCards {
+      margin-left: 20px;
+      padding-left: 5px;
+      display: inline-block;
+      text-align: left;
+  } */
+
+  .fiveDay {
+      text-align: left;
+  }
+
+  .saveBtn {
+    border-left: 1px solid black;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: #06AED5;
+    color: white;
+  }
+   
+
+  
+ 
