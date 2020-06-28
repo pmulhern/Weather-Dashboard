@@ -55,10 +55,17 @@ body {
     background-color: orange;
 }
 
-.severe.val{
+.severe{
     background-color: red;
 }
 
+#clearBtn {
+    float: right;
+}
+
+.text {
+    text-align: justify;
+}
    
 
   
