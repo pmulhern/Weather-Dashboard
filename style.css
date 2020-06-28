@@ -41,6 +41,24 @@ body {
     background-color: #06AED5;
     color: white;
   }
+
+.low {
+    background-color: green;
+}
+
+
+.moderate{
+    background-color: yellow;
+}
+
+.high{
+    background-color: orange;
+}
+
+.severe.val{
+    background-color: red;
+}
+
    
 
   
