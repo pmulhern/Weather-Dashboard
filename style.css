@@ -32,6 +32,9 @@ body {
 
   .fiveDay {
       text-align: left;
+      font-size: 16px; 
+      flex-wrap: wrap;
+
   }
 
   .saveBtn {
@@ -65,8 +68,26 @@ body {
 
 .text {
     text-align: justify;
+    text-overflow: unset;
 }
-   
+
+.searches{
+    text-align: center;
+    width: 200px;
+    height: 50px;  
+    font-size: 16px; 
+    display: inline-block;    
+}
+
+/* #searchTitle{
+    text-align: left;
+    font-size: large;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+} */
 
   
  
