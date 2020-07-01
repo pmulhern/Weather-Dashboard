@@ -40,21 +40,28 @@
 
     <Main class="mb-12" id ="main">
       <Section class="row">
+          
+          <div class="col-sm-2 ml-3 mt-2 card bg-info">
+            <div class="row mx-auto mb-2" id= "searchHistory"><strong>Search History</strong></div>
+            <div class="row ml-5 mt-2 pb-1" id="buttons-view"></div>
+          </div> 
           <div class="col-sm-8 ml-3 ">
 
-              <h1 class="current"><span id = "city"></span><img id="weatherImage" src=""></h3>                 
-              <h4 class="current">Temperature: <span id="temp"></span></h4>
-              <h4 class="current">Humidity: <span id="humidity"></span></h4>
-              <h4 class="current">Wind Speed: <span id="windspeed"></span></h4>
-              <h4 class="uv">UV Index: <span id="uvIndex"></span></h4>
-            
+              <div class = "card currentWeather mt-2 bg-info">
+              <h1 class="current ml-2"><span id = "city"></span><img id="weatherImage" src=""></h3>                 
+              <h4 class="current ml-2">Temperature: <span id="temp"></span></h4>
+              <h4 class="current ml-2">Humidity: <span id="humidity"></span></h4>
+              <h4 class="current ml-2">Wind Speed: <span id="windspeed"></span></h4>
+              <h4 class="uv ml-2">UV Index: <span id="uvIndex"></span></h4>
+              </div>
+
               <br>
               <hr>
-              <h2>5 Day Forecast</h2>
+              <h2 class = "text-gray"><strong>5 Day Forecast</strong></h2>
               <br>
-              <div class="row ml-1 container-fluid fiveDay">
+              <div class="row container-fluid fiveDay text-white ">
 
-                  <div class="p-1 ml-1 bg-primary text-white">
+                  <div class="p-1 ml-1 bg-info text-white ">
                     <div class="col-sm-1 weatherCards text-left" id="Day1">
                         <h5 class="date">Date: <span id="Date1"></span> </h5>
                         <img class="image" id="weatherImage1" src="">
@@ -63,7 +70,7 @@
                     </div>
                   </div>
 
-                  <div class="p-1 ml-1 bg-primary text-white">
+                  <div class="p-1 ml-1 bg-info text-white">
                     <div class="col-sm-1 weatherCards text-left" id="Day2">
                         <h5 class="date">Date: <span id="Date2"></span> </h5>
                         <img class="image" id="weatherImage2" src="">
@@ -72,7 +79,7 @@
                     </div>
                   </div>
         
-                  <div class="p-1 ml-1 bg-primary text-white">
+                  <div class="p-1 ml-1 bg-info text-white">
                     <div class="col-sm-1 weatherCards text-left" id="Day3">
                         <h5 class="date">Date: <span id="Date3"></span> </h5>
                         <img class="image" id="weatherImage3" src="">
@@ -81,7 +88,7 @@
                     </div>
                   </div>
         
-                  <div class="p-1 ml-1 bg-primary text-white">
+                  <div class="p-1 ml-1 bg-info text-white">
                     <div class="col-sm-1 weatherCards text-left" id="Day4">
                         <h5 class="date">Date: <span id="Date4"></span> </h5>
                         <img class="image" id="weatherImage4" src="">
@@ -90,7 +97,7 @@
                     </div>
                   </div>
         
-                  <div class="p-1 ml-1 bg-primary text-white">
+                  <div class="p-1 ml-1 mt-1 bg-info text-white">
                     <div class="col-sm-1 weatherCards text-left" id="Day5">
                         <h5 class="date">Date: <span id="Date5"></span> </h5>
                         <img class="image" id="weatherImage5" src="">
@@ -105,7 +112,7 @@
           <br>
           <br>
           
-          <div class="col-sm-1 ml-3" id="buttons-view"><span id="searchTitle">History</span></div>        
+                 
               
 
       </Section>

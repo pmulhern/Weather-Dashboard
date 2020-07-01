@@ -1,11 +1,20 @@
+$( document ).ready( lastSearch );
+
 var city = "";
 var date = moment().format('dddd, MMMM Do');
 var uv = $(".uv");
+var pullHistory = localStorage.getItem("City")
+var citiesSearched = JSON.parse(pullHistory)
+console.log(citiesSearched)
+
+if(citiesSearched === null){
+    lastCity = null} else {
+    lastCity = citiesSearched[citiesSearched.length-1]}
+console.log(lastCity)
 
 $(".searches").on("click", function(event) {
     event.preventDefault();   
-    currentWeather(); 
-    fiveDayForecast();
+    currentWeather().then(fiveDayForecast()); 
     uvColor();
     setStorage();
 })
@@ -15,7 +24,7 @@ function currentWeather() {
     var city = $("#citySearch").val();
     var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=cd805afbcca4574c470ae7a3e6fa7c0b&units=imperial";
 
-    $.ajax({
+    return $.ajax({
         url: queryURL,
         method: "GET"
     }).then(function(response) {
@@ -43,12 +52,7 @@ function currentWeather() {
 })};
 
 function fiveDayForecast() {
-    
-    var timeDelay = 1000;           // MILLISECONDS (5 SECONDS).
-    setTimeout(loadJSON, timeDelay);  // MAKE THE AJAX CALL AFTER A FEW SECONDS DELAY.
-
-    function loadJSON() {
-     
+         
     var lat = localStorage.getItem("lattitude", lat)
     var long = localStorage.getItem("longitude", long)
     console.log(lat)
@@ -80,7 +84,7 @@ function fiveDayForecast() {
         $(`#Temp${i}`).empty().append(temp + String.fromCharCode(176) + "F");
         $(`#Humidity${i}`).empty().append(humidity + String.fromCharCode(37));
     }
-})}};
+})};
 
 // LOCKED
 function uvColor() {
@@ -179,9 +183,49 @@ $(document).on("click", ".searches", function(event){
         fiveDayForecast();
     })});  
 
+function lastSearch() {
+
+    if (localStorage.getItem("City")===null){
+        return
+    } else {
+
+    var city = lastCity;
+    var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=cd805afbcca4574c470ae7a3e6fa7c0b&units=imperial";
+
+    return $.ajax({
+        url: queryURL,
+        method: "GET"
+    }).then(function(response) {
+        console.log(response)
+        var city = response.name
+        var temp = response.main.temp
+        var humidity = response.main.humidity
+        var windSpeed = response.wind.speed
+        var weatherDate = response.dt
+        var lat = response.coord.lat
+        var long = response.coord.lon
+        var weatherDate = response.dt
+        var correctedDate = new Date(weatherDate * 1000)
+        var correctedDate2 = moment(correctedDate).format('M/DD/YYYY')
+        
+        $("#city").empty().append(city +" (" + correctedDate2 + ")");
+        $("#temp").empty().append(temp + String.fromCharCode(176) + "F");
+        $("#humidity").empty().append(humidity + String.fromCharCode(37));
+        $("#windspeed").empty().append(windSpeed + " MPH");
+        $("#weatherImage").attr({"src": "http://openweathermap.org/img/w/" + response.weather[0].icon + ".png",
+        "height": "100px", "width":"100px"});
+
+        localStorage.setItem("lattitude", lat)
+        localStorage.setItem("longitude", long)
+
+        fiveDayForecast()
+})}};
+
 let clearBtn = document.getElementById("clearBtn");
 clearBtn.addEventListener("click",function() {
     window.localStorage.clear();
     location.reload();
     alert("Your tasks have been cleared")
 });
+
+
