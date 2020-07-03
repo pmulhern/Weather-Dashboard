@@ -2,6 +2,8 @@
 
 Deployed app: https://pmulhern.github.io/Weather-Dashboard/
 
+![](ReadMe%20Image.jpm)
+
 The Weather Dashboard application retrieves data from another application's API and uses it to display weather information on any city slected in the world!!. The Third-party APIs used is [OpenWeather API](https://openweathermap.org/api).
 
 
