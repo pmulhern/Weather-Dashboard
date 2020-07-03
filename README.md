@@ -4,7 +4,7 @@ Deployed app: https://pmulhern.github.io/Weather-Dashboard/
 
 ![](ReadMe%20Image.jpg)
 
-The Weather Dashboard application retrieves data from another application's API and uses it to display weather information on any city slected in the world!!. The Third-party APIs used is [OpenWeather API](https://openweathermap.org/api).
+The Weather Dashboard application retrieves data from another application's API and uses it to display weather information on any city slected in the world!! The Third-party APIs uses is [OpenWeather API](https://openweathermap.org/api).
 
 
 ## User Story
@@ -28,4 +28,8 @@ Functionality will include:
     6) When the application is lanuched, the screen will default to the last city searched (if available)
     7) User will be able to clear search history
 ```
+
+## Functionality
+```
+After testing, all known bugs have been addressed.  Functionality meets requirements and deployed application is working with a pleasant UI.
 
