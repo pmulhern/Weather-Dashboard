@@ -31,12 +31,6 @@ body {
       margin-top: 10px;
   }
 
-  /* .weatherCards {
-      margin-left: 20px;
-      padding-left: 5px;
-      display: inline-block;
-      text-align: left;
-  } */
 
   .fiveDay {
       text-align: left;
@@ -91,15 +85,6 @@ body {
     color: white;
 }
 
-/* #searchTitle{
-    text-align: left;
-    font-size: large;
-    margin-bottom: 10px;
-    padding-bottom: 10px;
-    width: 200px;
-    height: 50px;
-    text-align: center;
-} */
 
 .card {
 opacity: 1;
