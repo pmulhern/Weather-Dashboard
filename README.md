@@ -1,6 +1,6 @@
 # Weather Dashboard
 
-Deployed app: https://pmulhern.github.io/Weather-Dashboard/
+Deployed Application: https://pmulhern.github.io/Weather-Dashboard/
 
 ![](ReadMe%20Image.jpg)
 
