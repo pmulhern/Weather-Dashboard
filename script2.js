@@ -172,4 +172,4 @@ clearBtn.addEventListener("click",function() {
     alert("Your tasks have been cleared")
 });
 
-
+// End JS Code
