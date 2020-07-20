@@ -1,3 +1,4 @@
+/*Main body styling */
 body {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
@@ -5,6 +6,7 @@ body {
     background-image: url(background3.jpg);
   }
 
+/*Title styling */
   #title {
       background-color: slategray;
       text-align: center;
@@ -15,6 +17,7 @@ body {
       margin-left: 20px;
   }
 
+/*Search History */
   #searchHistory{
       margin-left: auto;
       margin-right: auto;
