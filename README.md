@@ -32,4 +32,4 @@ Functionality will include:
 ## Functionality
 ```
 After testing, all known bugs have been addressed.  Functionality meets requirements and deployed application is working with a pleasant UI.
-
+```
